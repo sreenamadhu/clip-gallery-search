@@ -20,10 +20,14 @@ First, [install PyTorch 1.7.1](https://pytorch.org/get-started/locally/) (or lat
 $ conda install --yes -c pytorch pytorch=1.7.1 torchvision cudatoolkit=11.0
 $ pip install ftfy regex tqdm
 $ pip install git+https://github.com/openai/CLIP.git
-$ pip install gradio==1.18
 ```
 
 Replace `cudatoolkit=11.0` above with the appropriate CUDA version on your machine or `cpuonly` when installing on a machine without a GPU.
+
+For the demo interface, i used [[gradio]](https://github.com/gradio-app/gradio)
+```bash
+$ pip install gradio==3.18
+```
 
 ## Usage
 
@@ -31,7 +35,7 @@ To extract the features for the Upsplash dataset:
 ```
 python extract_unsplash_features.py
 ```
-Or you can download the Unsplash dataset ![features](https://github.com/sreenamadhu/clip-gallery-search/blob/main/unsplash/clip-ViT-B-32-unsplash-lite.pt) file directly. 
+Or you can download the Unsplash dataset [[features]](https://github.com/sreenamadhu/clip-gallery-search/blob/main/unsplash/clip-ViT-B-32-unsplash-lite.pt) file directly. 
 
 To run the gallery search demo, 
 ```
